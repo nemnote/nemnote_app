@@ -1,8 +1,9 @@
 
 <% if logged_in? %>
     <ul>
-    <li><%= link_to "Users", '#' %></li>
-    <li><%= link_to "Log out", logout_path, method: :delete %></li>
+    <li><%= link_to "Users", users_path %></li>
+    <li><%= link_to "情報編集", edit_user_path(current_user) %></li>
+    <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
     </ul>
 <% else %>
     <li><%= link_to "ログイン", login_path %></li>

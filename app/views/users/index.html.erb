@@ -1,6 +1,13 @@
-<% @user.each do |user| %>
- <ul>
-    <il>名前：<%= user.name %></li>
-    <il>メールアドレス：<%= user.email %></li>
-  </ul>
-<% end %>
+<% provide(:title,"全てのユーザー") %>
+<h1>全てのユーザー</h1>
+
+<%= will_paginate %>
+
+ <ul class="users">
+<% @users.each do |user| %>
+    <%= render user %>
+    <% end %>
+ </ul>
+ 
+ 
+ <%= will_paginate %>

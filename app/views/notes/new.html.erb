@@ -1,0 +1,9 @@
+<%= provide(:title, "Post Note") %>
+<%= form_for(@note) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+    <%= f.text_area :content, placeholder: "投稿内容" %>
+    <%= f.hidden_field :user_id, :value => @user_id %>
+ 
+  <%= f.submit "投稿" %>
+<% end %>

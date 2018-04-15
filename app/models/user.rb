@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_many :notes, dependent: :destroy
     before_save { email.downcase! }
     validates :name, presence: true
     validates :email, presence: true

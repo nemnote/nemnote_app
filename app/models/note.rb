@@ -7,7 +7,7 @@ class Note < ApplicationRecord
     validate  :image_size
 
     private
-    def image
+    def image_size
         if image.size > 5.megabytes
             errors.add(:image, "5MB以下でお願いします！")
         end

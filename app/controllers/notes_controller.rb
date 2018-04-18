@@ -17,12 +17,20 @@ class NotesController < UsersController
     end
 
     def destroy
+        @note.destroy
+        flash[:success] = "Noteを削除しました"
+        redirect_to request.referrer || root_url
     end
     
     private
     
     def note_params
-      params.require(:note).permit(:content)
+      params.require(:note).permit(:content,:picture)
+    end
+
+    def correct_user
+        @note = current_user.notes.find_by(id: params[:id])
+        redirect_to root_url if @note.nil?
     end
     
 end

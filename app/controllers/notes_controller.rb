@@ -1,4 +1,4 @@
-class NotesController < UsersController
+class NotesController < ApplicationController
     before_action :logged_in_user, only: [:create, :destroy]
     before_action :correct_user,   only: :destroy
 
@@ -20,7 +20,7 @@ class NotesController < UsersController
     def destroy
         @note.destroy
         flash[:success] = "Noteを削除しました"
-        redirect_to request.referrer || root_url
+        redirect_to controller: :users, action: :show
     end
     
     private

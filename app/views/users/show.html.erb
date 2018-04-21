@@ -1,10 +1,9 @@
 <% provide(:title,@user.name) %>
-<div>
+<div class="container">
     <% if @user.notes.any? %>
-      <h3>Notes (<%= @user.notes.count %>)</h3>
-          <ol class="notes">
+          <ul class="notes">
             <%= render @notes %>
-          </ol>
+          </ul>
       <%= will_paginate @notes %>
     <% end %>
 </div>

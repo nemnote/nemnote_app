@@ -40,15 +40,15 @@ ul.notes{
   width:200px;
   display:none;
 }
-#search-pre-btn:hover{
-  opacity: 0.8;
+.navbar a.navbar-brand:hover{
+  background: white !important;
+  cursor: pointer !important;
 }
-
 .navbar-nav a:hover{
+  color: black !important;
   opacity: 0.6 !important;
-  background: none !important;
+  background: white !important;
 }
 .post-info{
   margin-top: 5px;
 }
-

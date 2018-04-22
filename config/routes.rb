@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   get '/post_list', to: 'users#show'
   get '/post', to: 'notes#new'
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :notes,          only: [:create, :destroy]
+  resources :relationships,       only: [:create, :destroy]
 end

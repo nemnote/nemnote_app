@@ -1,4 +1,5 @@
 <%= provide(:title, "Post Note") %>
+<div class="container">
 <%= form_for(@note) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
@@ -10,7 +11,7 @@
   </span>
   <%= f.hidden_field :user_id, :value => @user_id %>
 <% end %>
-
+</div>
 <script type="text/javascript">
     $('#note_picture').bind('change', function() {
         var size_in_megabytes = this.files[0].size/1024/1024;

@@ -1,5 +1,9 @@
 <% provide(:title,@user.name) %>
 <div class="container">
+  <section class="stats">
+    <%= render 'shared/stats' %>
+  </section>
+  <%= render 'follow_form' if logged_in? %>
     <% if @user.notes.any? %>
           <ul class="notes">
             <%= render @notes %>

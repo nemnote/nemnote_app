@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(user_params)
+    @categories = Category.all
     if @user.save
       log_in @user
       flash[:success] = "Welcome to nemnote!"

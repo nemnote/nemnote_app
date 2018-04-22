@@ -5,6 +5,7 @@ class NotesController < ApplicationController
     def new
         @note = Note.new
         @user_id = current_user.id
+        @categories = Category.all
     end
 
     def create

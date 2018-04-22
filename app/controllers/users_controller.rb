@@ -5,6 +5,10 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
+    @categories = Category.all
+    if logged_in?
+      redirect_to controller: :notes, action: :show
+    end
   end
   
   def create
@@ -21,10 +25,12 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @notes = @user.notes.paginate(page: params[:page])
+    @categories = Category.all
   end
   
   def index
     @users = User.paginate(page: params[:page])
+    @categories = Category.all
   end
   
   def update
@@ -39,6 +45,7 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
+    @categories = Category.all
   end
   
   def destroy

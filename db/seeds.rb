@@ -28,3 +28,7 @@ followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
 
+categories = ["エンタメ","スポーツ","コラム","ビジネス","ライフスタイル","テクノロジー"]
+categories.each {|category|
+  Category.create!(name:category)
+}

@@ -11,7 +11,7 @@
   <body>
     <div class="header-area">
     <%= render "shared/header" %>
-    <%= render "shared/categories" %>
+    <%= render template: "categories/category" %>
     </div>
     <div class="body-area">
       <% flash.each do |message_type, message| %>

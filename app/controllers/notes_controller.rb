@@ -22,6 +22,12 @@ class NotesController < ApplicationController
         flash[:success] = "Noteを削除しました"
         redirect_to controller: :users, action: :show
     end
+
+    def show
+        @user = current_user
+        @notes = Note.all.order(created_at: :asc).paginate(page: params[:page])
+        @categories = Category.all
+    end
     
     private
     

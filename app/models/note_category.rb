@@ -1,2 +1,0 @@
-class NoteCategory < ApplicationRecord
-end

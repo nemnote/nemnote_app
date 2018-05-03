@@ -15,6 +15,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'rails-controller-testing'
 gem 'will_paginate',           '3.1.6'
+gem 'mechanize'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

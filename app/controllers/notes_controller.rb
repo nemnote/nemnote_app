@@ -29,11 +29,19 @@ class NotesController < ApplicationController
         @notes = Note.all.order(created_at: :asc).paginate(page: params[:page])
         @categories = Category.all
     end
-    
+
+    def url
+        @url = params[:url]
+        respond_to do |format|
+            format.html
+            format.js
+        end
+    end
+
     private
     
     def note_params
-      params.require(:note).permit(:content,:picture)
+      params.require(:note).permit(:content,:picture,:title)
     end
 
     def correct_user

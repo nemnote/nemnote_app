@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180422084837) do
+ActiveRecord::Schema.define(version: 20180503152701) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "note_categories", force: :cascade do |t|
-    t.integer "category_id"
-    t.integer "note_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,6 +24,10 @@ ActiveRecord::Schema.define(version: 20180422084837) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "picture"
+    t.integer "category"
+    t.string "title"
+    t.index ["category"], name: "index_notes_on_category"
+    t.index ["title"], name: "index_notes_on_title"
     t.index ["user_id", "created_at"], name: "index_notes_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_notes_on_user_id"
   end
@@ -52,6 +49,9 @@ ActiveRecord::Schema.define(version: 20180422084837) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.boolean "admin", default: false
+    t.string "picture"
+    t.string "address"
+    t.index ["address"], name: "index_users_on_address"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

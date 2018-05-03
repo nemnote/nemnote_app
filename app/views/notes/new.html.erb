@@ -1,17 +1,52 @@
 <%= provide(:title, "Post Note") %>
-<div class="container">
-<%= form_for(@note) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
-    <%= f.text_area :content, placeholder: "投稿内容" %>
-  </div>
-  <%= f.submit "投稿", class: "btn btn-primary"%>
-  <span class="picture">
-    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+
+<div class="post-body">
+  <div class="container">
+  <%= form_for(@note) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+    <div class="form-group">
+      <%= f.text_field :title,placeholder:"タイトル",class:"form-control" %>
+    </div>
+    <div id="elementArea">
+      <div class="new element1">
+      <div class="addElement1 showMenuIcon icons" style="display: none;">
+        <i class="fas fa-plus-circle fa-2x"></i>
+      </div>
+      <div class="changeElementBack1 backMenuIcon postIcon icons" style="display: none;">
+        <i class="fas fa-times fa-2x"></i>
+        <p class="ex-box">テキスト入力</p>
+      </div>
+      <div class="changeElementUrl1 postIcon icons urlBtn" style="display: none;">
+        <i class="fas fa-globe fa-2x urlBtn1"></i>
+        <p class="ex-box">URL挿入</p>
+      </div>
+      <div class="changeElementImage1 postIcon icons imgBtn" style="display: none;">
+        <i class="far fa-image fa-2x imgBtn1">
+        </i>
+        <p class="ex-box">画像挿入</p>
+      </div>
+      <textarea placeholder="テキスト" class="input1" cols="50" rows="1"  oninput="textAreaHeightSet(this)" onchange="textAreaHeightSet(this)"></textarea>
+      <img id="img1" style="display: none;">
+      <input type="file" id="myfile1" style="display: none">
+      <button id="nextBtn1" style="display: none">追加</button>
+      <input class="url" type="url" id="url1" placeholder="URL" style="display: none;">
+      </div>
+    </div>
+    <span class="picture">
+    <%= f.file_field :picture, id: 'img1' ,style:'display:none;', accept: 'image/jpeg,image/gif,image/png' %>
   </span>
-  <%= f.hidden_field :user_id, :value => @user_id %>
-<% end %>
+    <%= f.hidden_field :user_id, :value => @user_id %>
+    <div style="display: none; ">
+      <%= f.text_area :content, id: "sendtext", size: "50x60" %>
+      </div>
+    <div class="form-group">
+      <%= f.select :category, [["エンタメ",1],["スポーツ",2],["コラム",3],["ビジネス",4],["ライフスタイル",5],["テクノロジー",6]],class:"form-control" %>
+    </div>
+  <%= f.submit "投稿", class: "btn btn-primary"%>
+  <% end %>
+  </div>
 </div>
+<%= stylesheet_link_tag "https://use.fontawesome.com/releases/v5.0.10/css/all.css" %>
 <script type="text/javascript">
     $('#note_picture').bind('change', function() {
         var size_in_megabytes = this.files[0].size/1024/1024;
@@ -20,3 +55,4 @@
         }
     });
 </script>
+<%= javascript_include_tag "main" %>

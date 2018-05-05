@@ -26,23 +26,22 @@
         <p class="ex-box">画像挿入</p>
       </div>
       <textarea placeholder="テキスト" class="input1" cols="50" rows="1"  oninput="textAreaHeightSet(this)" onchange="textAreaHeightSet(this)"></textarea>
-      <img id="img1" style="display: none;">
+        <span class="picture">
+        <%= f.file_field :picture, id: 'img1' ,style:'display:none;', accept: 'image/jpeg,image/gif,image/png' %>
+      </span>
       <input type="file" id="myfile1" style="display: none">
       <button id="nextBtn1" style="display: none">追加</button>
       <input class="url" type="url" id="url1" placeholder="URL" style="display: none;">
       </div>
     </div>
-    <span class="picture">
-    <%= f.file_field :picture, id: 'img1' ,style:'display:none;', accept: 'image/jpeg,image/gif,image/png' %>
-  </span>
+
     <%= f.hidden_field :user_id, :value => @user_id %>
-    <div style="display: none; ">
-      <%= f.text_area :content, id: "sendtext", size: "50x60" %>
-      </div>
+
     <div class="form-group">
       <%= f.select :category, [["エンタメ",1],["スポーツ",2],["コラム",3],["ビジネス",4],["ライフスタイル",5],["テクノロジー",6]],class:"form-control" %>
     </div>
   <%= f.submit "投稿", class: "btn btn-primary"%>
+      <%= f.text_area :content, id: "sendtext"%>
   <% end %>
   </div>
 </div>

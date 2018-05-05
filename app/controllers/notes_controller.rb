@@ -14,6 +14,7 @@ class NotesController < ApplicationController
             flash[:success] = "ノートを作成しました！"
             redirect_to post_list_path(@user_id)
         else
+            flash[:danger] = "エラー！"
             redirect_to action: :new
         end
     end
@@ -41,7 +42,7 @@ class NotesController < ApplicationController
     private
     
     def note_params
-      params.require(:note).permit(:content,:picture,:title)
+      params.require(:note).permit(:content,:picture,:title,:category,:user_id)
     end
 
     def correct_user

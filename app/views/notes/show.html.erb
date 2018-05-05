@@ -8,7 +8,7 @@
           <div class="media ">
             <div class="media-body">
               <h5 class="mt-0 mb-1">Title</h5>
-              <p><%= note.content %></p>
+              <%= note.content %>
             </div>
             <%= image_tag note.picture.url, class: "ml-3" if note.picture?%>
           </div>

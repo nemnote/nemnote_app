@@ -21,6 +21,11 @@ textarea:focus {
   outline: none;
 }
 
+#sendtext{
+  position: absolute;
+  visibility: hidden;
+}
+
 input[type=url] {
   font-size: 32px;
   border: none;

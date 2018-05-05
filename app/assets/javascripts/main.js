@@ -69,31 +69,34 @@ $(document).on('click', '.urlBtn', function () {
 
 $('textarea').attr("tabindex", "0");
 $(document).on("keydown", 'textarea', function (e) {
-    if (typeof e.keyCode === "undefined" || e.keyCode === 13) {
-        let i = $(this).attr('class').substr(5);
-        let j = $('.new').length + 1;
-        let n = $("textarea").length;
-        let Index = $('textarea').index(this);
-        let nextIndex = $('textarea').index(this) + 1;
-        let val = $(`.input${i}`).val();
-        $(`.addElement${i}`).hide();
-        let element = '<div class="new element'+j+'"><div class="addElement' + j +
-            ' showMenuIcon icons" style="display: none;"><i class="fas fa-plus-circle fa-2x"></i></div><div class="changeElementBack' +
-            j +
-            ' backMenuIcon postIcon icons" style="display: none;"><i class="fas fa-times fa-2x"></i><p class="ex-box">テキスト入力</p></div><div class="changeElementUrl' +
-            j +
-            ' postIcon icons urlBtn" style="display: none;"><i class="fas fa-globe fa-2x urlBtn' + j + '"></i><p class="ex-box">URL挿入</p></div><div class="changeElementImage' +
-            j +
-            ' postIcon icons imgBtn" style="display: none;"><i class="far fa-image fa-2x imgBtn' + j + '"></i><p class="ex-box">画像挿入</p></div><textarea type="text" placeholder="テキスト" class="input' +
-            j + '" cols="50" rows="1"  oninput="textAreaHeightSet(this)" onchange="textAreaHeightSet(this)" ></textarea><img id="img' + j + '" style="display: none"><input type="file" id="myfile' + j + '" style="display: none"><button id="nextBtn' + j + '" style="display: none">追加</button><input type="url" id="url' + j + '" style="display: none;"></div>';
-        $(`.element${i}`).after(element);
-        if (nextIndex < n) {
-            $('textarea')[nextIndex].focus();
-        } else {
-            $('textarea')[Index].blur();
-        }
-        $('#sendtext').append('<p>' + val + '</p>');
+    if (!(typeof e.keyCode === "undefined" || e.keyCode === 13)) {
+        return;
     }
+    let i = $(this).attr('class').substr(5);
+    let j = $('.new').length + 1;
+    let n = $("textarea").length;
+    let Index = $('textarea').index(this);
+    let nextIndex = $('textarea').index(this) + 1;
+    let val = $(`.input${i}`).val();
+    $(`.addElement${i}`).hide();
+    let element = '<div class="new element' + j + '"><div class="addElement' + j +
+        ' showMenuIcon icons" style="display: none;"><i class="fas fa-plus-circle fa-2x"></i></div><div class="changeElementBack' +
+        j +
+        ' backMenuIcon postIcon icons" style="display: none;"><i class="fas fa-times fa-2x"></i><p class="ex-box">テキスト入力</p></div><div class="changeElementUrl' +
+        j +
+        ' postIcon icons urlBtn" style="display: none;"><i class="fas fa-globe fa-2x urlBtn' + j + '"></i><p class="ex-box">URL挿入</p></div><div class="changeElementImage' +
+        j +
+        ' postIcon icons imgBtn" style="display: none;"><i class="far fa-image fa-2x imgBtn' + j + '"></i><p class="ex-box">画像挿入</p></div><textarea type="text" placeholder="テキスト" class="input' +
+        j + '" cols="50" rows="1"  oninput="textAreaHeightSet(this)" onchange="textAreaHeightSet(this)" ></textarea><img id="img' + j + '" style="display: none"><input type="file" id="myfile' + j + '" style="display: none"><button id="nextBtn' + j + '" style="display: none">追加</button><input type="url" id="url' + j + '" style="display: none;"></div>';
+    $(`.element${i}`).after(element);
+    if (nextIndex < n) {
+        $('textarea')[nextIndex].focus();
+    } else {
+        $('textarea')[Index].blur();
+    }
+    $('#sendtext').append('&lt;p&gt;' + val + '&lt;/p&gt;');
+    let text = $('#sendtext').val();
+    console.log(text);
 });
 
 $(document).on({
@@ -130,7 +133,7 @@ $(document).on("keydown", '.url', function (e) {
         } else {
             $('textarea')[Index].blur();
         }
-        $('#sendtext').append('<a href="'+val+'">' + val + '</a>');
+        $('#sendtext').append('&lt;a href="'+val+'"&gt;' + val + '&lt;/a&gt;');
     }
 });
 
@@ -141,7 +144,7 @@ $(document).on('click', 'input[type=file]', function () {
         if (file != null) {
             let name = file.name;
             $(`#nextBtn${i}`).on('click', function () {
-                $('#sendtext').append('<img src="' + name + '">')
+                $('#sendtext').append('&lt;img src="' + name + '"&gt;');
             })
 
         }

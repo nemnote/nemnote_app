@@ -1,0 +1,8 @@
+<div class="container">
+<%= form_for(@note) do |f| %>
+  <%= f.label :Price %>
+  <%= f.number_field :price,class:"form-control",readonly:true %>
+  <%= f.submit "購入"%>
+    <%= f.hidden_field :buy, value: 1 %>
+<% end %>
+</div>

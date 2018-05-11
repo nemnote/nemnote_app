@@ -40,7 +40,37 @@
     <div class="form-group">
       <%= f.select :category, [["エンタメ",1],["スポーツ",2],["コラム",3],["ビジネス",4],["ライフスタイル",5],["テクノロジー",6]],class:"form-control" %>
     </div>
-  <%= f.submit "投稿", class: "btn btn-primary"%>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        公開設定
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="justify-content: center;">
+              <h5>公開設定</h5>
+            </div>
+            <div class="modal-body">
+              <p class="sell">販売設定</p>
+              <div class="form-check form-check-inline">
+                <%= f.radio_button :price_status,0, style:"form-check-input",id:"inlineCheckbox1"%>
+                <label class="form-check-label" for="inlineCheckbox1">無料</label>
+              </div>
+              <div class="form-check form-check-inline">
+              <%= f.radio_button :price_status ,1, style:"form-check-input",id:"inlineCheckbox2" %>
+                <label class="form-check-label" for="inlineCheckbox2">有料</label>
+              </div>
+              <label class="input_price"><%= f.number_field :price %>XEM</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+              <%= f.submit "公開", class: "btn btn-primary"%>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <%= f.text_area :content, id: "sendtext"%>
   <% end %>
   </div>

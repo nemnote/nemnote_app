@@ -14,10 +14,17 @@ User.create!(name:  "Example User",
                password_confirmation: password)
 end
 
+#カテゴリーデータ
+categories = ["エンタメ","スポーツ","コラム","ビジネス","ライフスタイル","テクノロジー"]
+categories.each {|category|
+  Category.create!(name:category)
+}
+
 users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(5)
-  users.each { |user| user.notes.create!(content: content) }
+  title = Faker::Book.title
+  users.each { |user| user.notes.create!(content: content,title: title,category:rand(1..6))}
 end
 
 # リレーションシップ
@@ -27,8 +34,3 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
-
-categories = ["エンタメ","スポーツ","コラム","ビジネス","ライフスタイル","テクノロジー"]
-categories.each {|category|
-  Category.create!(name:category)
-}

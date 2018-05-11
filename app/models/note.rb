@@ -4,6 +4,7 @@ class Note < ApplicationRecord
     mount_uploader :picture, PictureUploader
     validates :user_id, presence:true
     validates :content, presence: true
+    validates :price_status, presence: true
     validate  :picture_size
 
     private

@@ -1,18 +1,15 @@
+//テキストエリアをクリックした時
 $(document).on('click', 'textarea', function () {
     let i = $(this).attr('class');
     let j = i.substr(5);
-    showIconBtn(j);
+    if($(`.input${j}`).attr('readonly') != 'readonly'){
+        showIconBtn(j);
+    }
 });
-// $(document).on('blur','textarea',function () {
-//     let i = $(this).attr('class');
-//     let j = i.substr(5);
-//     hideIconBtn(j);
-// });
-
+//テキストエリアの高さを自動調整
 function textAreaHeightSet(argObj){
     argObj.style.height = "10px";
     let wSclollHeight = parseInt(argObj.scrollHeight);
-    // テキストエリアの高さを設定する
     argObj.style.height = wSclollHeight + "px";
 }
 
@@ -95,8 +92,9 @@ $(document).on("keydown", 'textarea', function (e) {
         $('textarea')[Index].blur();
     }
     $('#sendtext').append('&lt;p&gt;' + val + '&lt;/p&gt;');
-    let text = $('#sendtext').val();
-    console.log(text);
+    $(`.input${i}`).attr('readonly',true);
+    hideIconBtn(i);
+
 });
 
 $(document).on({
@@ -150,4 +148,14 @@ $(document).on('click', 'input[type=file]', function () {
         }
     });
 
+});
+
+//有料にした時のアクション
+$("[name='note[price_status]']").on('click',function(){
+    let num = $("[name='note[price_status]']").index(this);
+    if(num == 1){
+        $(".input_price").css('visibility','visible');
+    }else{
+        $(".input_price").css('visibility','hidden');
+    }
 });

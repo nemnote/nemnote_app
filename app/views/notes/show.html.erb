@@ -1,4 +1,5 @@
 <%= provide(:title,"Note一覧") %>
+<%= render template: "categories/category" %>
 <div class="container">
     <ul class="notes">
       <% @notes.each do |note| %>
@@ -7,11 +8,18 @@
           <h6><%= link_to note.user.name, note.user %></h6>
           <div class="media ">
             <div class="media-body">
-              <h5 class="mt-0 mb-1">Title</h5>
-              <%= note.content %>
+              <h5 class="mt-0 mb-1"><%= link_to note.title, controller: 'notes',action: 'post_notes', id: note.id %></h5>
+              <div class="post-content-area">
+              <%= note.content.html_safe %>
+              </div>
             </div>
             <%= image_tag note.picture.url, class: "ml-3" if note.picture?%>
           </div>
+          <% if note.price_status == 1 %>
+            <div>
+              <span class="badge badge-warning">有料：<%= note.price %>XEM</span>
+            </div>
+          <% end %>
           <div class="row justify-content-between post-info">
             <div class="col-4">Posted <%= time_ago_in_words(note.created_at) %> ago.</div>
           </div>

@@ -39,10 +39,23 @@ class NotesController < ApplicationController
         end
     end
 
+    def post_notes
+        @note = Note.find(params[:id])
+        if @note.buy != 1
+            redirect_to action: :buy_note, id: @note.id
+        end
+    end
+
+    # def buy_note
+    #     @note = Note.find(params[:id])
+    #     @note.buy =
+    #     @note.save
+    # end
+
     private
     
     def note_params
-      params.require(:note).permit(:content,:picture,:title,:category,:user_id)
+      params.require(:note).permit(:content,:picture,:title,:category,:user_id,:price,:price_status,:buy)
     end
 
     def correct_user

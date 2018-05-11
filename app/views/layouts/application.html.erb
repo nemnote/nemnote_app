@@ -10,7 +10,6 @@
   <body>
     <div class="header-area">
     <%= render "shared/header" %>
-    <%= render template: "categories/category" %>
     </div>
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>

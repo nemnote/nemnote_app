@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20180511183524) do
     t.integer "category"
     t.string "title"
     t.integer "price"
-    t.integer "price_status"
+    t.integer "price_status", limit: 5
     t.integer "buy"
     t.index ["category"], name: "index_notes_on_category"
     t.index ["price"], name: "index_notes_on_price"

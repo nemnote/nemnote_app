@@ -24,8 +24,20 @@ users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(5)
   title = Faker::Book.title
-  users.each { |user| user.notes.create!(content: content,title: title,category:rand(1..6))}
+  users.each do |user|
+   user.notes.create!(content: content,
+                      title: title,category:rand(1..6),
+                      price_status:rand(0..1)
+   )
+  end
 end
+  allnotes = Note.all
+  allnotes.each do |note|
+    if note.price_status == 1
+      note.price = rand(100..3000)
+      note.save
+    end
+  end
 
 # リレーションシップ
 users = User.all

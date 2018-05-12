@@ -41,16 +41,28 @@ class NotesController < ApplicationController
 
     def post_notes
         @note = Note.find(params[:id])
-        if @note.buy != 1
+        if @note.price_status == 1 && @note.buy != 1
             redirect_to action: :buy_note, id: @note.id
         end
     end
 
-    # def buy_note
-    #     @note = Note.find(params[:id])
-    #     @note.buy =
-    #     @note.save
-    # end
+    def buy_note
+        @note = Note.find(params[:id])
+        if @note.price_status == 0
+            redirect_to action: :post_notes, id:@note.id
+        end
+    end
+
+    def buy_note_create
+        @note = Note.find(params[:id])
+        @note.buy = 1
+        if @note.save
+            redirect_to action: :post_notes, id:@note.id
+            flash[:success] = "購入しました"
+        else
+            flash[:danger] = "購入に失敗しました"
+        end
+    end
 
     private
     

@@ -9,11 +9,12 @@ Rails.application.routes.draw do
   get '/post', to: 'notes#new'
   get '/note', to: 'notes#post_notes'
   get '/note_buy', to: 'notes#buy_note'
+  patch '/note_buy', to: 'notes#buy_note_create'
   resources :users do
     member do
       get :following, :followers
     end
   end
-  resources :notes,          only: [:create, :destroy]
+  resources :notes,          only: [:create, :destroy,:buy_note]
   resources :relationships,       only: [:create, :destroy]
 end

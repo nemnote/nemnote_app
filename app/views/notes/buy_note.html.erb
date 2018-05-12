@@ -1,5 +1,5 @@
 <div class="container">
-<%= form_for(@note) do |f| %>
+<%= form_for @note, :url => {:controller => :notes, :action => :buy_note_create,:id => @note.id} do |f| %>
   <%= f.label :Price %>
   <%= f.number_field :price,class:"form-control",readonly:true %>
   <%= f.submit "購入"%>

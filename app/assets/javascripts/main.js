@@ -1,7 +1,7 @@
 //テキストエリアをクリックした時
 $(document).on('click', 'textarea', function () {
-    let i = $(this).attr('class');
-    let j = i.substr(5);
+    var i = $(this).attr('class');
+    var j = i.substr(5);
     if($(`.input${j}`).attr('readonly') !== 'readonly'){
         showIconBtn(j);
     }
@@ -9,7 +9,7 @@ $(document).on('click', 'textarea', function () {
 //テキストエリアの高さを自動調整
 function textAreaHeightSet(argObj){
     argObj.style.height = "10px";
-    let wSclollHeight = parseInt(argObj.scrollHeight);
+    var wSclollHeight = parseInt(argObj.scrollHeight);
     argObj.style.height = wSclollHeight + "px";
 }
 
@@ -20,20 +20,20 @@ function hideIconBtn(j) {
     $(`.addElement${j}`).hide();
 }
 $(document).on('click', '.showMenuIcon', function () {
-    let i = $(this).attr('class');
-    let j = i.match(/addElement[0-9]/);
-    let addElementClass = j[0];
-    let addElementNum = addElementClass.substr(10);
+    var i = $(this).attr('class');
+    var j = i.match(/addElement[0-9]/);
+    var addElementClass = j[0];
+    var addElementNum = addElementClass.substr(10);
     $(`.changeElementImage${addElementNum}`).show();
     $(`.changeElementBack${addElementNum}`).show();
     $(this).hide();
     $(`.input${addElementNum}`).hide();
 });
 $(document).on('click', '.backMenuIcon', function () {
-    let i = $(this).attr('class');
-    let j = i.match(/changeElementBack[0-9]/);
-    let changeMenuBackClass = j[0];
-    let changeMenuBackNum = changeMenuBackClass.substr(17);
+    var i = $(this).attr('class');
+    var j = i.match(/changeElementBack[0-9]/);
+    var changeMenuBackClass = j[0];
+    var changeMenuBackNum = changeMenuBackClass.substr(17);
     $(`.addElement${changeMenuBackNum}`).show();
     $(`.input${changeMenuBackNum}`).show();
     $(`.changeElementImage${changeMenuBackNum}`).hide();
@@ -44,10 +44,10 @@ $(document).on('click', '.backMenuIcon', function () {
 });
 
 $(document).on('click', '.postIcon', function () {
-    let i = $(this).attr('class');
-    let j = i.match(/changeElementImage[0-9]/);
-    let imgBtnClass = j[0];
-    let imgBtnNum = imgBtnClass.substr(18);
+    var i = $(this).attr('class');
+    var j = i.match(/changeElementImage[0-9]/);
+    var imgBtnClass = j[0];
+    var imgBtnNum = imgBtnClass.substr(18);
     console.log(imgBtnNum);
     $(`.addElement${imgBtnNum}`).hide();
     $(`.changeElementImage${imgBtnNum}`).show();
@@ -61,14 +61,14 @@ $(document).on("keydown", 'textarea', function (e) {
     if (!(typeof e.keyCode === "undefined" || e.keyCode === 13)) {
         return;
     }
-    let i = $(this).attr('class').substr(5);
-    let j = $('.new').length + 1;
-    let n = $("textarea").length;
-    let Index = $('textarea').index(this);
-    let nextIndex = $('textarea').index(this) + 1;
-    let val = $(`.input${i}`).val();
+    var i = $(this).attr('class').substr(5);
+    var j = $('.new').length + 1;
+    var n = $("textarea").length;
+    var Index = $('textarea').index(this);
+    var nextIndex = $('textarea').index(this) + 1;
+    var val = $(`.input${i}`).val();
     $(`.addElement${i}`).hide();
-    let element = '<div class="new element' + j + '"><div class="addElement' + j +
+    var element = '<div class="new element' + j + '"><div class="addElement' + j +
         ' showMenuIcon icons" style="display: none;"><i class="fas fa-plus-circle fa-2x"></i></div><div class="changeElementBack' +
         j +
         ' backMenuIcon postIcon icons" style="display: none;"><i class="fas fa-times fa-2x"></i><p class="ex-box">テキスト入力</p></div><div class="changeElementImage' +
@@ -92,12 +92,12 @@ $(document).on("keydown", 'textarea', function (e) {
 
 $('#inputFile').change(function(e){
     //ファイルオブジェクトを取得する
-    let file = e.target.files[0];
-    let reader = new FileReader();
-    let i = $('div[class^=changeElementImage]:visible').attr('class');
-    let j = i.match(/changeElementImage[0-9]/);
-    let fileClass = j[0];
-    let filenum = fileClass.substr(18);
+    var file = e.target.files[0];
+    var reader = new FileReader();
+    var i = $('div[class^=changeElementImage]:visible').attr('class');
+    var j = i.match(/changeElementImage[0-9]/);
+    var fileClass = j[0];
+    var filenum = fileClass.substr(18);
 
     //画像でない場合は処理終了
     if(file.type.indexOf("image") < 0){
@@ -117,7 +117,7 @@ $('#inputFile').change(function(e){
 
 //有料にした時のアクション
 $("[name='note[price_status]']").on('click',function(){
-    let num = $("[name='note[price_status]']").index(this);
+    var num = $("[name='note[price_status]']").index(this);
     if(num == 1){
         $(".input_price").css('visibility','visible');
     }else{

@@ -1,17 +1,17 @@
-let i = $('div[class^=changeElementImage]:visible').attr('class');
-let j = i.match(/changeElementImage[0-9]/);
-    let nextBtnClass = j[0];
-    let nextBtnNum = nextBtnClass.substr(18);
+var i = $('div[class^=changeElementImage]:visible').attr('class');
+var j = i.match(/changeElementImage[0-9]/);
+    var nextBtnClass = j[0];
+    var nextBtnNum = nextBtnClass.substr(18);
 
-    let index = nextBtnNum - 1;
-    let k = $('.new').length + 1;
-     let Index = $('textarea').eq(index);
-     let nextIndex = $('textarea').eq(index + 1);
+    var index = nextBtnNum - 1;
+    var k = $('.new').length + 1;
+     var Index = $('textarea').eq(index);
+     var nextIndex = $('textarea').eq(index + 1);
 
-     let filename = $(`img.showimg${nextBtnNum}`).attr('title');
+     var filename = $(`img.showimg${nextBtnNum}`).attr('title');
 $('#sendtext').append('&lt;img class="showthum showimgpost'+ nextBtnNum +'" src="uploads/image/picture/<%= current_user.id %>/'+ filename +'"&gt;');
 
-    let element = '<div class="new element' + k + '"><div class="addElement' + k +
+    var element = '<div class="new element' + k + '"><div class="addElement' + k +
         ' showMenuIcon icons" style="display: none;"><i class="fas fa-plus-circle fa-2x"></i></div><div class="changeElementBack' +
         k +
         ' backMenuIcon postIcon icons" style="display: none;"><i class="fas fa-times fa-2x"></i><p class="ex-box">テキスト入力</p></div><div class="changeElementImage' +

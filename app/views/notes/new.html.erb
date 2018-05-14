@@ -1,5 +1,5 @@
 <%= provide(:title, "Post Note") %>
-
+<%= stylesheet_link_tag "https://use.fontawesome.com/releases/v5.0.10/css/all.css" %>
 <div class="post-body">
   <div class="container">
   <%= form_for(@note,url:{controller: 'notes',action: 'create'}) do |f| %>
@@ -98,5 +98,4 @@
   <% end %>
   </div>
 </div>
-<%= stylesheet_link_tag "https://use.fontawesome.com/releases/v5.0.10/css/all.css" %>
 <%= javascript_include_tag "main" %>

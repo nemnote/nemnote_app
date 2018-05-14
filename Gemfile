@@ -16,6 +16,7 @@ gem 'mini_magick'
 gem 'rails-controller-testing'
 gem 'will_paginate',           '3.1.6'
 gem 'mechanize'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

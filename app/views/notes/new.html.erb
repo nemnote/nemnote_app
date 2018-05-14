@@ -38,17 +38,9 @@
               </div>
               <div class="modal-body modal-body-area1">
                 <img src="" alt="" class="showimg1 showthum">
-                <div>
-                  <%= f.fields_for @image do |ff| %>
-                    <div data-role="image_area">
                       <div>
-                        <%= image_tag @image.picture.url(:thumb) unless @image.picture.blank? %>
-                        <%= ff.file_field :picture, id:"inputFile" %>
+                        <%= render :partial => 'file_form',:locals => {:f=>f} %>
                       </div>
-                    </div>
-                    <%= ff.hidden_field :user_id, value:@user_id %>
-                  <% end %>
-                </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -9,7 +9,7 @@ var j = i.match(/changeElementImage[0-9]/);
      var nextIndex = $('textarea').eq(index + 1);
 
      var filename = $(`img.showimg${nextBtnNum}`).attr('title');
-$('#sendtext').append('&lt;img class="showthum showimgpost'+ nextBtnNum +'" src="uploads/image/picture/<%= current_user.id %>/'+ filename +'"&gt;');
+$('#sendtext').append('&lt;img class="showthum showimgpost'+ nextBtnNum +'" src="uploads/note/picture/<%= current_user.id %>/'+ filename +'"&gt;');
 
     var element = '<div class="new element' + k + '"><div class="addElement' + k +
         ' showMenuIcon icons" style="display: none;"><i class="fas fa-plus-circle fa-2x"></i></div><div class="changeElementBack' +

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180514083327) do
+ActiveRecord::Schema.define(version: 20180514141242) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20180514083327) do
     t.integer "price"
     t.integer "price_status", limit: 5
     t.integer "buy"
+    t.string "picture"
     t.index ["category"], name: "index_notes_on_category"
     t.index ["price"], name: "index_notes_on_price"
     t.index ["title"], name: "index_notes_on_title"

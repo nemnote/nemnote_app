@@ -52,7 +52,7 @@ $(document).on('click', '.postIcon', function () {
     $(`.addElement${imgBtnNum}`).hide();
     $(`.changeElementImage${imgBtnNum}`).show();
     $(`.changeElementBack${imgBtnNum}`).show();
-    $(`div#modal${imgBtnNum}`).modal('show');
+    $(`#modal${imgBtnNum}`).modal('show');
     $(`#nextBtn${imgBtnNum}`).show();
 });
 

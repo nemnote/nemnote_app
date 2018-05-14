@@ -90,15 +90,6 @@ $(document).on("keydown", 'textarea', function (e) {
 
 });
 
-$(document).on({
-    "mouseenter": function () {
-        $(this).next('p').show();
-    },
-    "mouseleave": function () {
-        $(this).next('p').hide();
-    }
-}, "i");
-
 $('#inputFile').change(function(e){
     //ファイルオブジェクトを取得する
     let file = e.target.files[0];

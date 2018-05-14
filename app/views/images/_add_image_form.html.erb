@@ -1,0 +1,6 @@
+<div>
+  <%= fields_for :pictures do |ff| %>
+        <%= ff.file_field :picture, id:"inputFile" %>
+    <%= ff.hidden_field :user_id, value:@user_id %>
+  <% end %>
+</div>

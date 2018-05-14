@@ -1,16 +1,11 @@
 class Note < ApplicationRecord
-    belongs_to :user
-    default_scope -> { order(created_at: :desc) }
+    belongs_to :user, optional: true
+    has_many :images,dependent: :destroy
+    accepts_nested_attributes_for :images, allow_destroy: true
     mount_uploader :picture, PictureUploader
+    serialize :picture, JSON
+    default_scope -> { order(created_at: :desc) }
     validates :user_id, presence:true
     validates :content, presence: true
     validates :price_status, presence: true
-    validate  :picture_size
-
-    private
-    def picture_size
-        if picture.size > 5.megabytes
-            errors.add(:picture, "5MB以下でお願いします！")
-        end
-    end
 end

@@ -4,13 +4,16 @@ class NotesController < ApplicationController
 
     def new
         @note = Note.new
+        @image = Image.new
+        @user = current_user
         @user_id = current_user.id
         @categories = Category.all
     end
 
     def create
         @note = current_user.notes.build(note_params)
-        if @note.save
+        @image= @note.images.build(image_params)
+        if @note.save! && @image.save!
             flash[:success] = "ノートを作成しました！"
             redirect_to post_list_path(@user_id)
         else
@@ -68,6 +71,10 @@ class NotesController < ApplicationController
     
     def note_params
       params.require(:note).permit(:content,:picture,:title,:category,:user_id,:price,:price_status,:buy)
+    end
+
+    def image_params
+        params.require(:note).permit(:user_id,pictures_attribute:[:picture])
     end
 
     def correct_user

@@ -24,6 +24,18 @@ ul.notes{
   box-shadow: rgba(0,0,0,0.1) 0 1px 1px 0;
 }
 
+//profile_pic
+.profile_pic{
+  width:10%;
+  height:10%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.showthum{
+  height: 300px;
+}
+
 #search-pre-btn{
   width: 30px;
   height: 30px;
@@ -73,3 +85,4 @@ label.input_price{
   margin-top: 10px;
   visibility: hidden;
 }
+

@@ -8,8 +8,12 @@ class PictureUploader < CarrierWave::Uploader::Base
      storage :file
    end
 
+  version :thumb do
+    process :resize_to_limit => [300, 300]
+  end
+
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.user_id}"
   end
 
   def extension_whitelist

@@ -8260,12 +8260,12 @@ if (inBrowser) {
 
 /* harmony default export */ __webpack_exports__["a"] = (Vue);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! ./../../webpack/buildin/global.js */ 0), __webpack_require__(/*! ./../../timers-browserify/main.js */ 7).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! ./../../webpack/buildin/global.js */ 0), __webpack_require__(/*! ./../../timers-browserify/main.js.erb */ 7).setImmediate))
 
 /***/ }),
 /* 7 */
 /*!************************************************!*\
-  !*** ./node_modules/timers-browserify/main.js ***!
+  !*** ./node_modules/timers-browserify/main.js.erb ***!
   \************************************************/
 /*! dynamic exports provided */
 /*! all exports used */

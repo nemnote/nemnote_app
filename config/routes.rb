@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/note', to: 'notes#post_notes'
   get '/note_buy', to: 'notes#buy_note'
   patch '/note_buy', to: 'notes#buy_note_create'
+  get  '/images', to: 'images#new'
   resources :users do
     member do
       get :following, :followers
@@ -17,4 +18,5 @@ Rails.application.routes.draw do
   end
   resources :notes,          only: [:create, :destroy,:buy_note]
   resources :relationships,       only: [:create, :destroy]
+  resources :images, only:[:create]
 end

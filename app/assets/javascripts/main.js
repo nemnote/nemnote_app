@@ -2,7 +2,7 @@
 $(document).on('click', 'textarea', function () {
     let i = $(this).attr('class');
     let j = i.substr(5);
-    if($(`.input${j}`).attr('readonly') != 'readonly'){
+    if($(`.input${j}`).attr('readonly') !== 'readonly'){
         showIconBtn(j);
     }
 });
@@ -85,7 +85,7 @@ $(document).on("keydown", 'textarea', function (e) {
         $('textarea')[Index].blur();
     }
     $('#sendtext').append('&lt;p&gt;' + val + '&lt;/p&gt;');
-    $(`.input${i}`).attr('readonly',true);
+    $(`input${i}`).attr('readonly',true);
     hideIconBtn(i);
 
 });

@@ -22,8 +22,8 @@
       <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/notes/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="25" column="69" lean-forward="false" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+            <state relative-caret-position="541">
+              <caret line="107" column="7" lean-forward="true" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -32,8 +32,8 @@
       <file leaf-file-name="new.js.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/images/new.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="87">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <marker date="1526285261856" expanded="true" signature="681:695" ph="..." />
                 <marker date="1526285261856" expanded="true" signature="834:848" ph="..." />
@@ -49,6 +49,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
               <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_add_link_form.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/images/_add_link_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -77,40 +87,20 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="92" column="19" lean-forward="false" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+            <state relative-caret-position="-2081">
+              <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
               <folding>
-                <marker date="1526288705273" expanded="true" signature="2427:3218" ph="..." />
-                <marker date="1526288705273" expanded="true" signature="2495:2509" ph="..." />
-                <marker date="1526288705273" expanded="true" signature="2648:2662" ph="..." />
-                <marker date="1526288705273" expanded="true" signature="2818:2832" ph="..." />
-                <marker date="1526288705273" expanded="true" signature="2833:2923" ph="..." />
-                <marker date="1526288705273" expanded="true" signature="3135:3148" ph="..." />
-                <marker date="1526288705273" expanded="true" signature="3187:3200" ph="..." />
-                <marker date="1526288705273" expanded="true" signature="3609:3616" ph="×" />
-                <marker date="1526288705273" expanded="true" signature="4070:4073" ph="&lt;" />
-                <marker date="1526288705273" expanded="true" signature="4074:4078" ph="&gt;" />
+                <marker date="1526289220807" expanded="true" signature="2428:3219" ph="..." />
+                <marker date="1526289220807" expanded="true" signature="2496:2510" ph="..." />
+                <marker date="1526289220807" expanded="true" signature="2649:2663" ph="..." />
+                <marker date="1526289220807" expanded="true" signature="2819:2833" ph="..." />
+                <marker date="1526289220807" expanded="true" signature="2834:2924" ph="..." />
+                <marker date="1526289220807" expanded="true" signature="3136:3149" ph="..." />
+                <marker date="1526289220807" expanded="true" signature="3188:3201" ph="..." />
+                <marker date="1526289220807" expanded="true" signature="3610:3617" ph="×" />
+                <marker date="1526289220807" expanded="true" signature="4071:4074" ph="&lt;" />
+                <marker date="1526289220807" expanded="true" signature="4075:4079" ph="&gt;" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="images_helper.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/images_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/image.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -120,6 +110,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="453">
               <caret line="77" column="7" lean-forward="false" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="note.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/note.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -699,12 +699,12 @@
       <workItem from="1524921075637" duration="17087000" />
       <workItem from="1525361091370" duration="3246000" />
       <workItem from="1525525494778" duration="5498000" />
-      <workItem from="1525997594464" duration="61636000" />
+      <workItem from="1525997594464" duration="62122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140214000" />
+    <option name="totallyTimeSpent" value="140700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -946,14 +946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/notes/new.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1007,16 +999,6 @@
         <state relative-caret-position="179">
           <caret line="34" column="10" lean-forward="false" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/images/_add_link_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding>
-            <element signature="e#87#108#0#HTML" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1076,14 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/note.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/image.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1124,14 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/images/_add_image_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/notes.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1156,18 +1122,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/notes/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/note.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="69" lean-forward="false" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+        <state relative-caret-position="115">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/images/_add_link_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/notes/new.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/images/new.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="87">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <marker date="1526285261856" expanded="true" signature="681:695" ph="..." />
             <marker date="1526285261856" expanded="true" signature="834:848" ph="..." />
@@ -1177,21 +1159,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/images/_add_image_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/notes/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="107" column="7" lean-forward="true" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="92" column="19" lean-forward="false" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+        <state relative-caret-position="-2081">
+          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
           <folding>
-            <marker date="1526288705273" expanded="true" signature="2427:3218" ph="..." />
-            <marker date="1526288705273" expanded="true" signature="2495:2509" ph="..." />
-            <marker date="1526288705273" expanded="true" signature="2648:2662" ph="..." />
-            <marker date="1526288705273" expanded="true" signature="2818:2832" ph="..." />
-            <marker date="1526288705273" expanded="true" signature="2833:2923" ph="..." />
-            <marker date="1526288705273" expanded="true" signature="3135:3148" ph="..." />
-            <marker date="1526288705273" expanded="true" signature="3187:3200" ph="..." />
-            <marker date="1526288705273" expanded="true" signature="3609:3616" ph="×" />
-            <marker date="1526288705273" expanded="true" signature="4070:4073" ph="&lt;" />
-            <marker date="1526288705273" expanded="true" signature="4074:4078" ph="&gt;" />
+            <marker date="1526289220807" expanded="true" signature="2428:3219" ph="..." />
+            <marker date="1526289220807" expanded="true" signature="2496:2510" ph="..." />
+            <marker date="1526289220807" expanded="true" signature="2649:2663" ph="..." />
+            <marker date="1526289220807" expanded="true" signature="2819:2833" ph="..." />
+            <marker date="1526289220807" expanded="true" signature="2834:2924" ph="..." />
+            <marker date="1526289220807" expanded="true" signature="3136:3149" ph="..." />
+            <marker date="1526289220807" expanded="true" signature="3188:3201" ph="..." />
+            <marker date="1526289220807" expanded="true" signature="3610:3617" ph="×" />
+            <marker date="1526289220807" expanded="true" signature="4071:4074" ph="&lt;" />
+            <marker date="1526289220807" expanded="true" signature="4075:4079" ph="&gt;" />
           </folding>
         </state>
       </provider>

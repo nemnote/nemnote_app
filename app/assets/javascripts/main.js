@@ -124,3 +124,8 @@ $("[name='note[price_status]']").on('click',function(){
         $(".input_price").css('visibility','hidden');
     }
 });
+
+//donateボタンを押した時に送金画面が出てくる
+$(document).on('click','.donate',function(){
+    $("#donateModal").modal('show');
+});

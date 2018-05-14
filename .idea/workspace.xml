@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4178cd0-8f73-47a4-b0cb-6817be4af708" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/main.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/main.js" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" />
-      <change beforePath="$PROJECT_DIR$/app/views/notes/post_notes.html.erb" afterPath="$PROJECT_DIR$/app/views/notes/post_notes.html.erb" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/notes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/notes_controller.rb" />
+      <change beforePath="$PROJECT_DIR$/app/views/notes/show.html.erb" afterPath="$PROJECT_DIR$/app/views/notes/show.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -52,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="129" column="25" lean-forward="true" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
+            <state relative-caret-position="2967">
+              <caret line="129" column="25" lean-forward="false" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
               <folding>
                 <marker date="1526301101985" expanded="true" signature="2425:3216" ph="..." />
                 <marker date="1526301101985" expanded="true" signature="2493:2507" ph="..." />
@@ -87,10 +85,30 @@
         <entry file="file://$PROJECT_DIR$/app/views/notes/post_notes.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+              <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
               <folding>
                 <element signature="e#811#818#1#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/notes/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notes_controller.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/notes_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -163,7 +181,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20180511091936_add_price_to_notes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20180511151532_add_price_status_to_notes.rb" />
-        <option value="$PROJECT_DIR$/app/views/notes/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
@@ -184,7 +201,6 @@
         <option value="$PROJECT_DIR$/app/models/note.rb" />
         <option value="$PROJECT_DIR$/app/views/images/_add_image_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/image.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/notes_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180514083012_remove_picture_from_notes.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
@@ -198,6 +214,8 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" />
         <option value="$PROJECT_DIR$/app/views/notes/post_notes.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/main.js" />
+        <option value="$PROJECT_DIR$/app/views/notes/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/notes_controller.rb" />
       </list>
     </option>
   </component>
@@ -703,7 +721,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146177000" />
+    <option name="totallyTimeSpent" value="146404000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -781,14 +799,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/relationships.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180422154628_add_image_to_users.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -1029,14 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/notes_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="77" column="7" lean-forward="false" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/note.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1173,7 +1175,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/notes/post_notes.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
           <folding>
             <element signature="e#811#818#1#HTML" expanded="true" />
           </folding>
@@ -1190,8 +1192,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="129" column="25" lean-forward="true" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
+        <state relative-caret-position="2967">
+          <caret line="129" column="25" lean-forward="false" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
           <folding>
             <marker date="1526301101985" expanded="true" signature="2425:3216" ph="..." />
             <marker date="1526301101985" expanded="true" signature="2493:2507" ph="..." />
@@ -1204,6 +1206,22 @@
             <marker date="1526301101985" expanded="true" signature="4068:4071" ph="&lt;" />
             <marker date="1526301101985" expanded="true" signature="4072:4076" ph="&gt;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/notes/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/notes_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>

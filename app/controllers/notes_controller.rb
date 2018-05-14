@@ -44,9 +44,6 @@ class NotesController < ApplicationController
 
     def post_notes
         @note = Note.find(params[:id])
-        if @note.price_status == 1 && @note.buy != 1
-            redirect_to action: :buy_note, id: @note.id
-        end
     end
 
     def buy_note

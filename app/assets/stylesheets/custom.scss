@@ -36,6 +36,24 @@ ul.notes{
   height: 300px;
 }
 
+.donate{
+  position: fixed;
+  right: 100px;
+  top:400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.donate_icon{
+  color: yellow;
+}
+
 #search-pre-btn{
   width: 30px;
   height: 30px;

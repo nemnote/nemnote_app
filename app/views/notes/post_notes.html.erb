@@ -1,8 +1,12 @@
 <%= provide(:title,"Note") %>
+<%= stylesheet_link_tag "https://use.fontawesome.com/releases/v5.0.10/css/all.css" %>
 <div class="container">
   <div class="notes_page">
     <h5><%= @note.title %></h5>
     <p><%= @note.content.html_safe %></p>
   </div>
   </div>
+<div class="donate">
+<i class="fas fa-donate fa-7x donate_icon"></i>
+</div>
 

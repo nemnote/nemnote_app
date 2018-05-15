@@ -1,9 +1,12 @@
 module NotesHelper
-  def url_scraping(url)
-    agent = Mechanize.new
-    page = agent.get(url)
-    content = page.at('mata[property="og:description"]')
-    image = page.at('mata[property="og:image"]')
-    title = page.at('mata[property="og:title"]')
+  require "open-uri"
+  require "nokogiri"
+
+def html_string(content)
+content
   end
+end
+
+def ex
+  gsub(/<img(.+?)>/i,"")
 end

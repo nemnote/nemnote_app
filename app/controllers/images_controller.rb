@@ -3,11 +3,6 @@ class ImagesController < ApplicationController
     @image = Image.new
     @user = current_user
     @user_id = current_user.id
-    if request.xhr?
-      respond_to do |format|
-        format.js
-      end
-    end
   end
 
   def create

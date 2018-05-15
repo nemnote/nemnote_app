@@ -3,15 +3,14 @@
   <%= link_to "NEMNOTE", root_path,class:"navbar-brand"  %>
   <div class="row">
   <% if logged_in? %>
+      <%= link_to "記事一覧", root_path,class: "btn btn-outline-success ml-1 my-2 my-sm-0" %>
       <%= link_to "マイページ", user_path(current_user),class: "btn btn-outline-success ml-1 my-2 my-sm-0" %>
       <%= link_to "情報編集", edit_user_path(current_user),class: "btn btn-outline-success ml-1 my-2 my-sm-0" %>
       <%= link_to "記事投稿", post_path,class: "btn btn-outline-success ml-1 my-2 my-sm-0" %>
       <%= link_to "ログアウト", logout_path, method: :delete ,class: "btn btn-outline-success ml-1 my-2 my-sm-0" %>
-      <%= image_tag("serch_icon_pre.png", id: "search-pre-btn", class: "ml-3 mr-2") %>
     <% else %>
       <%= link_to "ログイン", login_path, class: "btn btn-outline-success ml-1 my-2 my-sm-0" %>
       <%= link_to "新規登録", signup_path, class: "btn btn-outline-success ml-1 my-2 my-sm-0"  %>
-      <%= image_tag("serch_icon_pre.png", id: "search-pre-btn", class: "ml-3 mr-2") %>
 <% end %>
   </div>
 </nav>

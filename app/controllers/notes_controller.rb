@@ -6,7 +6,10 @@ class NotesController < ApplicationController
         @note = Note.new
         @user = current_user
         @user_id = current_user.id
-        @categories = Category.all
+        unless @user.address?
+            redirect_to edit_user_path(@user)
+            flash[:danger] = "NEMアドレスを登録してください"
+        end
     end
 
     def create
@@ -42,6 +45,7 @@ class NotesController < ApplicationController
 
     def post_notes
         @note = Note.find(params[:id])
+        @user_address = @note.user.address
     end
 
     def buy_note
@@ -65,7 +69,7 @@ class NotesController < ApplicationController
     private
     
     def note_params
-      params.require(:note).permit(:content,:picture,:title,:category,:user_id,:price,:price_status,:buy)
+      params.require(:note).permit(:content,:title,:category,:user_id,:price,:price_status,:buy,images_attributes: [:picture])
     end
 
 

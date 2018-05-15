@@ -48,11 +48,10 @@ $(document).on('click', '.postIcon', function () {
     var j = i.match(/changeElementImage[0-9]/);
     var imgBtnClass = j[0];
     var imgBtnNum = imgBtnClass.substr(18);
-    console.log(imgBtnNum);
     $(`.addElement${imgBtnNum}`).hide();
     $(`.changeElementImage${imgBtnNum}`).show();
     $(`.changeElementBack${imgBtnNum}`).show();
-    $(`#modal${imgBtnNum}`).modal('show');
+    $('#modal').modal('show');
     $(`#nextBtn${imgBtnNum}`).show();
 });
 
@@ -75,9 +74,7 @@ $(document).on("keydown", 'textarea', function (e) {
         j +
         ' postIcon icons imgBtn" style="display: none;"><i class="far fa-image fa-2x imgBtn' +
         j + '"></i><p class="ex-box">画像挿入</p></div><textarea type="text" placeholder="テキスト" class="input' +
-        j + '" cols="50" rows="1"  oninput="textAreaHeightSet(this)" onchange="textAreaHeightSet(this)" ></textarea><img id="img' +
-        j + '" style="display: none"><button id="nextBtn' + j + '" style="display: none">追加</button></div><div class="modal fade" id="modal'+
-        j +'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title'+j+'" id="exampleModalLabel">画像選択</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body'+j+'"></div><div class="modal-footer'+j+'"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><button type="button" class="btn btn-primary">Save changes</button></div></div></div></div>';
+        j + '" cols="50" rows="1"  oninput="textAreaHeightSet(this)" onchange="textAreaHeightSet(this)" ></textarea><img src="" alt="" class="showimg'+j+' showthum"><div id="nextBtn'+j+'" class="next" style="display:none;"><i class="fas fa-arrow-down fa-2x"></i> </div>';
     $(`.element${i}`).after(element);
     if (nextIndex < n) {
         $('textarea')[nextIndex].focus();
@@ -90,7 +87,7 @@ $(document).on("keydown", 'textarea', function (e) {
 
 });
 
-$('#inputFile').change(function(e){
+$(document).on('change','.inputFile',function(e){
     //ファイルオブジェクトを取得する
     var file = e.target.files[0];
     var reader = new FileReader();
@@ -98,7 +95,7 @@ $('#inputFile').change(function(e){
     var j = i.match(/changeElementImage[0-9]/);
     var fileClass = j[0];
     var filenum = fileClass.substr(18);
-
+    console.log(filenum);
     //画像でない場合は処理終了
     if(file.type.indexOf("image") < 0){
         alert("画像ファイルを指定してください。");
@@ -112,7 +109,7 @@ $('#inputFile').change(function(e){
         };
     })(file);
     reader.readAsDataURL(file);
-
+    $('#modal').modal('hide');
 });
 
 //有料にした時のアクション
@@ -125,7 +122,38 @@ $("[name='note[price_status]']").on('click',function(){
     }
 });
 
-//donateボタンを押した時に送金画面が出てくる
-$(document).on('click','.donate',function(){
-    $("#donateModal").modal('show');
+
+$(document).on('click','.xem_donate',function () {
+    var i = $('div[id^=nextBtn]:visible').attr('id');
+    console.log(i);
+    var k = i.match(/nextBtn[0-9]/);
+    var nextBtnClass = k[0];
+    var nextBtnNum = nextBtnClass.substr(7);
+
+    var index = nextBtnNum - 1;
+    var j = $('.new').length + 1;
+    var Index = $('textarea').eq(index);
+    var nextIndex = $('textarea').eq(index + 1);
+    var n = $("textarea").length;
+
+    var filename = $(`img.showimg${nextBtnNum}`).attr('title');
+    $('#sendtext').append('&lt;img class="showthum showimgpost'+ nextBtnNum +'" src="uploads/image/picture/'+ filename +'"&gt;');
+
+    var element = '<div class="new element' + j + '"><div class="addElement' + j +
+        ' showMenuIcon icons" style="display: none;"><i class="fas fa-plus-circle fa-2x"></i></div><div class="changeElementBack' +
+        j +
+        ' backMenuIcon postIcon icons" style="display: none;"><i class="fas fa-times fa-2x"></i><p class="ex-box">テキスト入力</p></div><div class="changeElementImage' +
+        j +
+        ' postIcon icons imgBtn" style="display: none;"><i class="far fa-image fa-2x imgBtn' +
+        j + '"></i><p class="ex-box">画像挿入</p></div><textarea type="text" placeholder="テキスト" class="input' +
+        j + '" cols="50" rows="1"  oninput="textAreaHeightSet(this)" onchange="textAreaHeightSet(this)" ></textarea><img src="" alt="" class="showimg'+j+' showthum"><div id="nextBtn'+j+'" class="next" style="display:none;"><i class="fas fa-arrow-down fa-2x"></i> </div>';
+    $(`.element${nextBtnNum}`).after(element);
+    if (nextIndex < n) {
+        $('textarea')[nextIndex].focus();
+    }
+
+    $(`.changeElementImage${nextBtnNum}`).hide();
+    $(`.changeElementBack${nextBtnNum}`).hide();
+    $(`#nextBtn${nextBtnNum}`).hide();
+
 });

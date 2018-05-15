@@ -108,11 +108,6 @@ img.profile_image{
   height:5%;
 }
 
-//post
-.post-content-area p{
-
-}
-
 //販売設定
 p.sell{
   display: inline;
@@ -121,5 +116,10 @@ p.sell{
 label.input_price{
   margin-top: 10px;
   visibility: hidden;
+}
+
+.post-content-area.overflow{
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 

@@ -3,10 +3,9 @@
   <h6><%= link_to note.user.name, note.user %></h6>
   <div class="media ">
     <div class="media-body">
-      <h5 class="mt-0 mb-1">Title</h5>
-      <%= note.content.html_safe %>
+      <h5 class="mt-0 mb-1"><%= link_to note.title, controller: 'notes',action: 'post_notes', id: note.id %></h5>
+      <%= note.content.gsub(/<img(.+?)>/i,"").html_safe %>
     </div>
-    <%= image_tag note.picture.url, class: "ml-3" if note.picture?%>
   </div>
     <div class="row justify-content-between post-info">
       <div class="col-4">Posted <%= time_ago_in_words(note.created_at) %> ago.</div>

@@ -2,14 +2,14 @@
 <%= stylesheet_link_tag "https://use.fontawesome.com/releases/v5.0.10/css/all.css" %>
 <div class="container">
   <div class="notes_page">
-    <h5><%= @note.title %></h5>
+    <h1><%= @note.title %></h1>
     <p><%= @note.content.html_safe %></p>
   </div>
   </div>
 <div class="xem_donate">
   <p>XEM送金！</p>
 <div class="donate">
-<i class="fas fa-donate fa-7x donate_icon"></i>
+  <img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chl=<%= @user_address %>">
 </div>
 </div>
 <!-- Modal -->

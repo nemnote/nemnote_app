@@ -271,6 +271,10 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.13.1)
+    nested_form_fields (0.8.2)
+      coffee-rails (>= 3.2.1)
+      jquery-rails
+      rails (>= 3.2.0)
     net-http-digest_auth (1.4.1)
     net-http-persistent (2.9.4)
     netrc (0.11.0)
@@ -397,6 +401,8 @@ DEPENDENCIES
   listen (= 3.1.5)
   mechanize
   mini_magick
+  nested_form_fields
+  nokogiri
   pg (= 0.20.0)
   puma (= 3.9.1)
   rails (= 5.1.4)

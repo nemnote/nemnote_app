@@ -17,6 +17,8 @@ gem 'rails-controller-testing'
 gem 'will_paginate',           '3.1.6'
 gem 'mechanize'
 gem "font-awesome-rails"
+gem 'nested_form_fields'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

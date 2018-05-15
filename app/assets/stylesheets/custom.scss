@@ -36,25 +36,14 @@ ul.notes{
   height: 300px;
 }
 
-.xem_donate{
+.donate{
+  display: flex;
+  justify-content: center;
   position: fixed;
   right: 100px;
   top:550px;
   height: 200px;
   width: 200px;
-}
-.xem_donate>p{
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 18px;
-  padding-right: 40px;
-}
-
-.donate{
-  display: flex;
-  justify-content: center;
   align-items: center;
   margin: 0 !important;
   background: grey;
@@ -63,6 +52,10 @@ ul.notes{
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 18px;
 }
 
 .donate:hover{

@@ -123,7 +123,7 @@ $("[name='note[price_status]']").on('click',function(){
 });
 
 
-$(document).on('click','.xem_donate',function () {
+$(document).on('click','.next',function () {
     var i = $('div[id^=nextBtn]:visible').attr('id');
     console.log(i);
     var k = i.match(/nextBtn[0-9]/);
